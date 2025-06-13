@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <label for="upload">Upload</label> -->
+    <input onchange="inputChanger(event)" id="upload" type="file">
+    <img src="" alt="">
+    <video src="" autoplay controls></video>
+
+    <script>
+        let imageTag = document.getElementsByTagName('img')[0]
+        console.log(imageTag)
+
+        let videoTag = document.querySelector('video')
+        console.log(videoTag)
+
+        function inputChanger(e){
+            let file = e.target.files[0]
+            console.log(file)
+            // imageTag.src = URL.createObjectURL(file)
+
+            let reader = new FileReader();
+            reader.readAsDataURL(file)
+
+            reader.onload=()=>{
+              console.log(reader.result)
+            //   imageTag.src = reader.result
+            //   console.log(imageTag)
+              videoTag.src = reader.result
+              console.log(videoTag)
+            }
+
+            reader.onerror=()=>{
+               console.log(reader.error)
+            }
+
+            
+
+            console.log(imageTag)
+        }
+    </script>
+</body>
+</html>
