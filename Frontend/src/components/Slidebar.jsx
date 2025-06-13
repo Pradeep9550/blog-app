@@ -173,7 +173,7 @@ const Slidebar = (props) => {
             file:modifiedArr
           }
 
-          let res = await axios.post("http://localhost:5000/api/post/create", finalArr, {
+          let res = await axios.post("https://blog-app-backend-ianr.onrender.com/api/post/create", finalArr, {
             headers: {
               'Authorization': userStore.token
             }

@@ -26,7 +26,7 @@ function App() {
   // console.log(login)
 
   const getUserDetails =async ()=>{
-  let res = await axios.get('http://localhost:5000/api/auth/getuser',{
+  let res = await axios.get('https://blog-app-backend-ianr.onrender.com/api/auth/getuser',{
     headers: {
       'Authorization' : userStore.token
     }

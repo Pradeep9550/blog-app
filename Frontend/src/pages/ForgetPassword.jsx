@@ -10,7 +10,7 @@ const ForgetPassword = () => {
     const handleSubmit =async ()=>{
        let value  = emailRef.current.value;
        console.log(value)
-       let res = await axios.post('http://localhost:5000/api/auth/resetPassword',{email:value})
+       let res = await axios.post('https://blog-app-backend-ianr.onrender.com/api/auth/resetPassword',{email:value})
        let data = res.data;
        console.log(data)
        setMsg(data.msg)

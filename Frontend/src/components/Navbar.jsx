@@ -86,7 +86,7 @@ const Navbar = () => {
             file:modifiedArr
           }
 
-          let res = await axios.post("http://localhost:5000/api/post/create", finalArr, {
+          let res = await axios.post("https://blog-app-backend-ianr.onrender.com/api/post/create", finalArr, {
             headers: {
               'Authorization': userStore.token
             }
@@ -121,7 +121,7 @@ const Navbar = () => {
   const handleSearchChanger = async(e)=>{
     // console.log(e.target.value)
     let value = e.target.value
-    let res = await axios.get(`http://localhost:5000/api/auth/search?q=${value}`);
+    let res = await axios.get(`https://blog-app-backend-ianr.onrender.com/api/auth/search?q=${value}`);
     let data = res.data;
     // console.log(data.users)
     setsearchUsers(data.users)

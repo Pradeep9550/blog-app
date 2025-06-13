@@ -24,7 +24,7 @@ const Home = () => {
   console.log(AllPosts)
 
   const getAllUserPost = async () => {
-    let res = await axios.get('http://localhost:5000/api/post/getAllPost');
+    let res = await axios.get('https://blog-app-backend-ianr.onrender.com/api/post/getAllPost');
     let data = res.data;
     // console.log(data)
     setAllPosts(res.data.post)
@@ -38,7 +38,7 @@ const Home = () => {
   const handleLikes = async(postId)=>{
     console.log("running")
     console.log(postId)
-    let res = await axios.get(`http://localhost:5000/api/post/likes/${postId}`,{
+    let res = await axios.get(`https://blog-app-backend-ianr.onrender.com/api/post/likes/${postId}`,{
       headers:{
         'Authorization':userStore.token
       }
@@ -83,7 +83,7 @@ const Home = () => {
   const handleCommentSubmit = async(postId)=>{
     // console.log(postId)
     //   console.log(commentValue)
-      let res = await  axios.post(`http://localhost:5000/api/post/comments/${postId}`,{text:commentValue},{
+      let res = await  axios.post(`https://blog-app-backend-ianr.onrender.com/api/post/comments/${postId}`,{text:commentValue},{
         headers:{
           'Authorization':userStore.token
         }

@@ -22,7 +22,7 @@ const Signup = () => {
     }
 
     console.log(obj)
-    let res = await axios.post('http://localhost:5000/api/auth/signup',obj)
+    let res = await axios.post('https://blog-app-backend-ianr.onrender.com/api/auth/signup',obj)
     console.log(res.data)
 
     if(res.data.success){

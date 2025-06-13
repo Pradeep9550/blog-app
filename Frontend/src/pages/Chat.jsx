@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom'
 import { io } from "socket.io-client";
 
 const Chat = () => {
-  const Endpoint = "http://localhost:5000"
+  const Endpoint = "https://blog-app-backend-ianr.onrender.com"
   let socket = io(Endpoint, { transports: ['websocket'] });
 
 
@@ -25,7 +25,7 @@ const Chat = () => {
 
   console.log(allChat)
   async function getChat() {
-    let res = await axios.get(`http://localhost:5000/api/message/getMessages/${friend._id}`, {
+    let res = await axios.get(`https://blog-app-backend-ianr.onrender.com/api/message/getMessages/${friend._id}`, {
       headers: {
         'Authorization': token
       }
@@ -60,7 +60,7 @@ const Chat = () => {
     console.log("running")
     console.log(currentMessage)
 
-    let res = await axios.post(`http://localhost:5000/api/message/send/${friend._id}`, { text: currentMessage }, {
+    let res = await axios.post(`https://blog-app-backend-ianr.onrender.com/api/message/send/${friend._id}`, { text: currentMessage }, {
       headers: {
         'Authorization': token
       }
