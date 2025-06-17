@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white fixed z-50 top-0 left-0 right-0 border-b border-gray-200 dark:bg-gray-900">
-      <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
+      <div className="max-w-screen-xl flex items-center justify-between mx-auto p-6">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-3">
           <span className="text-2xl font-semibold dark:text-white">BlogApp</span>
