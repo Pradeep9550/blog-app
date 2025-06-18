@@ -158,7 +158,7 @@ async function sendMail(email,reset_token){
           from: 'pradeep961677@gmail.com', // sender address
           to: email, // list of receivers
           subject: "Password reset request", // Subject line
-         text: `Please click the link below to choose a new password: \n http://localhost:5000/api/auth/forgetPassword/${reset_token}`
+         text: `Please click the link below to choose a new password: \n https://blog-app-backend-ianr.onrender.com/api/auth/forgetPassword/${reset_token}`
         });
 
 }
