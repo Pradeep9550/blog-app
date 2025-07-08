@@ -19,6 +19,12 @@ Dotenv.config();
 const PORT = process.env.PORT 
 
 
+app.use(cors({
+  origin: 'https://blog-app-ruddy-eight.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
+
 
 
 app.set('view engine', 'ejs')
